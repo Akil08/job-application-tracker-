@@ -32,7 +32,20 @@ A full-stack web application designed for local development to help job seekers 
 
 ## 📸 Screenshots
 
-*(Screenshots to be added manually)*
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Dashboard - All Jobs
+![Dashboard](screenshots/all%20jobs.png)
+
+### Add New Job Form
+![Add Job Form](screenshots/form.png)
+
+### Filter Jobs
+![Filter Jobs](screenshots/filter.png)
+
+### Status Breakdown
+![Status Breakdown](screenshots/status.png)
 
 ## ⚙️ Local Setup Instructions
 
