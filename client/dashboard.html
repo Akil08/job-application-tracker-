@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>My Job Applications</h1>
+            <button id="logoutBtn" style="width: auto; background-color: #7f8c8d;">Logout</button>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>Total Applications</h3>
+                <div class="stat-number" id="totalApps">0</div>
+            </div>
+            <div id="statusStats" style="display: contents;">
+                <!-- Dynamic stats will be inserted here -->
+            </div>
+        </div>
+
+        <div class="jobs-controls">
+            <button id="addJobBtn" style="width: auto;">+ Add New Job</button>
+            <select id="statusFilter" style="width: 200px;">
+                <option value="">All Statuses</option>
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Offer">Offer</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+        </div>
+
+        <div id="jobsContainer" class="job-list">
+            <!-- Jobs will be listed here -->
+        </div>
+    </div>
+
+    <!-- Add/Edit Job Modal -->
+    <div id="jobModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle" style="margin-bottom: 20px;">Add New Job</h2>
+            <form id="jobForm">
+                <div class="form-group">
+                    <label>Company Name</label>
+                    <input type="text" id="company_name" required>
+                </div>
+                <div class="form-group">
+                    <label>Job Title</label>
+                    <input type="text" id="job_title" required>
+                </div>
+                <div class="form-group">
+                    <label>Job Type</label>
+                    <select id="job_type">
+                        <option value="Full-time">Full-time</option>
+                        <option value="Part-time">Part-time</option>
+                        <option value="Contract">Contract</option>
+                        <option value="Internship">Internship</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Source</label>
+                    <input type="text" id="application_source" placeholder="e.g. LinkedIn">
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" id="location">
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <select id="status">
+                        <option value="Applied">Applied</option>
+                        <option value="Interview">Interview</option>
+                        <option value="Offer">Offer</option>
+                        <option value="Rejected">Rejected</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea id="notes" rows="3"></textarea>
+                </div>
+                <button type="submit">Save Application</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
